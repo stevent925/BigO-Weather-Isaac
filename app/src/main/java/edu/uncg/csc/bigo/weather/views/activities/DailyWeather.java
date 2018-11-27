@@ -117,7 +117,6 @@ public class DailyWeather extends Fragment {
         }
     }
 
-
     /**
      * This is where we will test things
      */
@@ -148,59 +147,215 @@ public class DailyWeather extends Fragment {
                 }
                 message.append("\n");
 
-                    for (int i = 0; i < 7; i++) {
-                        switch (testDailyWeatherForecastController[i][Globals.ICON]) {
-                            case "clear-day":
-                                Icons clear_day = Icons.valueOf("Clear_day".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(clear_day.getIconResId());
-                                break;
 
-                            case "clear-night":
-                                Icons clear_night = Icons.valueOf("Clear_night".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(clear_night.getIconResId());
-                                break;
+                switch (testDailyWeatherForecastController[0][Globals.ICON]) {
+                    case "clear-day":
+                        Icons clear_day = Icons.valueOf("Clear_day".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(clear_day.getIconResId());
+                        break;
 
-                            case "cloudy":
-                                Icons cloudy = Icons.valueOf("Cloudy".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(cloudy.getIconResId());
-                                break;
+                    case "clear-night":
+                        Icons clear_night = Icons.valueOf("Clear_night".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(clear_night.getIconResId());
+                        break;
 
-                            case "fog":
-                                Icons fog = Icons.valueOf("Fog".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(fog.getIconResId());
-                                break;
+                    case "cloudy":
+                        Icons cloudy = Icons.valueOf("Cloudy".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(cloudy.getIconResId());
+                        break;
 
-                            case "partly-cloudy-day":
-                                Icons partly_cloudy_day = Icons.valueOf("Partly_cloudy_day".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(partly_cloudy_day.getIconResId());
-                                break;
+                    case "fog":
+                        Icons fog = Icons.valueOf("Fog".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(fog.getIconResId());
+                        break;
 
-                            case "partly-cloudy-night":
-                                Icons partly_cloudy_night = Icons.valueOf("Partly_cloudy_night".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(partly_cloudy_night.getIconResId());
-                                break;
+                    case "partly-cloudy-day":
+                        Icons partly_cloudy_day = Icons.valueOf("Partly_cloudy_day".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(partly_cloudy_day.getIconResId());
+                        break;
 
-                            case "rain":
-                                Icons rain = Icons.valueOf("Rain".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(rain.getIconResId());
-                                break;
+                    case "partly-cloudy-night":
+                        Icons partly_cloudy_night = Icons.valueOf("Partly_cloudy_night".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(partly_cloudy_night.getIconResId());
+                        break;
 
-                            case "sleet":
-                                Icons sleet = Icons.valueOf("Sleet".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(sleet.getIconResId());
-                                break;
+                    case "rain":
+                        Icons rain = Icons.valueOf("Rain".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(rain.getIconResId());
+                        break;
 
-                            case "snow":
-                                Icons snow = Icons.valueOf("Snow".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(snow.getIconResId());
-                                break;
+                    case "sleet":
+                        Icons sleet = Icons.valueOf("Sleet".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(sleet.getIconResId());
+                        break;
 
-                            case "wind":
-                                Icons wind = Icons.valueOf("Wind".toUpperCase(Locale.ENGLISH));
-                                days[i].setImageResource(wind.getIconResId());
-                                break;
-                        }
-                    }
+                    case "snow":
+                        Icons snow = Icons.valueOf("Snow".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(snow.getIconResId());
+                        break;
+
+                    case "wind":
+                        Icons wind = Icons.valueOf("Wind".toUpperCase(Locale.ENGLISH));
+                        monday.setImageResource(wind.getIconResId());
+                        break;
+                }
+
+                switch (testDailyWeatherForecastController[1][Globals.ICON]) {
+                    case "clear-day":
+                        Icons clear_day = Icons.valueOf("Clear_day".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(clear_day.getIconResId());
+                        break;
+
+                    case "clear-night":
+                        Icons clear_night = Icons.valueOf("Clear_night".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(clear_night.getIconResId());
+                        break;
+
+                    case "cloudy":
+                        Icons cloudy = Icons.valueOf("Cloudy".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(cloudy.getIconResId());
+                        break;
+
+                    case "fog":
+                        Icons fog = Icons.valueOf("Fog".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(fog.getIconResId());
+                        break;
+
+                    case "partly-cloudy-day":
+                        Icons partly_cloudy_day = Icons.valueOf("Partly_cloudy_day".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(partly_cloudy_day.getIconResId());
+                        break;
+
+                    case "partly-cloudy-night":
+                        Icons partly_cloudy_night = Icons.valueOf("Partly_cloudy_night".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(partly_cloudy_night.getIconResId());
+                        break;
+
+                    case "rain":
+                        Icons rain = Icons.valueOf("Rain".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(rain.getIconResId());
+                        break;
+
+                    case "sleet":
+                        Icons sleet = Icons.valueOf("Sleet".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(sleet.getIconResId());
+                        break;
+
+                    case "snow":
+                        Icons snow = Icons.valueOf("Snow".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(snow.getIconResId());
+                        break;
+
+                    case "wind":
+                        Icons wind = Icons.valueOf("Wind".toUpperCase(Locale.ENGLISH));
+                        tuesday.setImageResource(wind.getIconResId());
+                        break;
+                }
+
+                switch (testDailyWeatherForecastController[2][Globals.ICON]) {
+                    case "clear-day":
+                        Icons clear_day = Icons.valueOf("Clear_day".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(clear_day.getIconResId());
+                        break;
+
+                    case "clear-night":
+                        Icons clear_night = Icons.valueOf("Clear_night".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(clear_night.getIconResId());
+                        break;
+
+                    case "cloudy":
+                        Icons cloudy = Icons.valueOf("Cloudy".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(cloudy.getIconResId());
+                        break;
+
+                    case "fog":
+                        Icons fog = Icons.valueOf("Fog".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(fog.getIconResId());
+                        break;
+
+                    case "partly-cloudy-day":
+                        Icons partly_cloudy_day = Icons.valueOf("Partly_cloudy_day".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(partly_cloudy_day.getIconResId());
+                        break;
+
+                    case "partly-cloudy-night":
+                        Icons partly_cloudy_night = Icons.valueOf("Partly_cloudy_night".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(partly_cloudy_night.getIconResId());
+                        break;
+
+                    case "rain":
+                        Icons rain = Icons.valueOf("Rain".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(rain.getIconResId());
+                        break;
+
+                    case "sleet":
+                        Icons sleet = Icons.valueOf("Sleet".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(sleet.getIconResId());
+                        break;
+
+                    case "snow":
+                        Icons snow = Icons.valueOf("Snow".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(snow.getIconResId());
+                        break;
+
+                    case "wind":
+                        Icons wind = Icons.valueOf("Wind".toUpperCase(Locale.ENGLISH));
+                        wednesday.setImageResource(wind.getIconResId());
+                        break;
+                }
+
+                switch (testDailyWeatherForecastController[3][Globals.ICON]) {
+                    case "clear-day":
+                        Icons clear_day = Icons.valueOf("Clear_day".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(clear_day.getIconResId());
+                        break;
+
+                    case "clear-night":
+                        Icons clear_night = Icons.valueOf("Clear_night".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(clear_night.getIconResId());
+                        break;
+
+                    case "cloudy":
+                        Icons cloudy = Icons.valueOf("Cloudy".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(cloudy.getIconResId());
+                        break;
+
+                    case "fog":
+                        Icons fog = Icons.valueOf("Fog".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(fog.getIconResId());
+                        break;
+
+                    case "partly-cloudy-day":
+                        Icons partly_cloudy_day = Icons.valueOf("Partly_cloudy_day".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(partly_cloudy_day.getIconResId());
+                        break;
+
+                    case "partly-cloudy-night":
+                        Icons partly_cloudy_night = Icons.valueOf("Partly_cloudy_night".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(partly_cloudy_night.getIconResId());
+                        break;
+
+                    case "rain":
+                        Icons rain = Icons.valueOf("Rain".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(rain.getIconResId());
+                        break;
+
+                    case "sleet":
+                        Icons sleet = Icons.valueOf("Sleet".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(sleet.getIconResId());
+                        break;
+
+                    case "snow":
+                        Icons snow = Icons.valueOf("Snow".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(snow.getIconResId());
+                        break;
+
+                    case "wind":
+                        Icons wind = Icons.valueOf("Wind".toUpperCase(Locale.ENGLISH));
+                        thursday.setImageResource(wind.getIconResId());
+                        break;
+                }
+
 
                 return message.toString();
             } catch (Exception exception) {
@@ -212,7 +367,7 @@ public class DailyWeather extends Fragment {
         protected void onPostExecute(String result) {
             mTextMessage.setText(result);
         }
-
     }
 }
+
 

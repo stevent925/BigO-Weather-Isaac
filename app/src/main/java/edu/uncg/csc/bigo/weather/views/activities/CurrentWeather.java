@@ -40,7 +40,6 @@ public class CurrentWeather extends Fragment {
         // Required empty public constructor
     }
 
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
@@ -61,16 +60,8 @@ public class CurrentWeather extends Fragment {
         //Initialize the image box
         image = (ImageView) v.findViewById(R.id.imageView);
 
-        return v;
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        View view = getView();
-        if (view != null) {
-            view.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        if (v != null) {
+            v.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Make sure the user inputs a properly formatted zip.
@@ -92,13 +83,18 @@ public class CurrentWeather extends Fragment {
                 }
             });
         }
+
+        return v;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
     }
 
 
-    /**
-     * This is where we will test things
-     */
-    public class Test extends AsyncTask<Void, Void, String> {
+
+   public class Test extends AsyncTask<Void, Void, String> {
 
 
         protected String doInBackground(Void... nothing) {
@@ -116,6 +112,7 @@ public class CurrentWeather extends Fragment {
                 message.append("Currently: \n");
                 String[] testCurrentWeatherController = WeatherController.getWeatherCurrent(zipCode);
 
+                message.append(testCurrentWeatherController[0] + "\n");
                 message.append("Temperature: " + testCurrentWeatherController[18] + "\n");
                 message.append("Summary: " + testCurrentWeatherController[3] + "\n");
                 message.append("Precipitation: " + testCurrentWeatherController[2] + "\n");
@@ -181,11 +178,9 @@ public class CurrentWeather extends Fragment {
             }
         }
 
-
         protected void onPostExecute(String result) {
             mTextMessage.setText(result);
-
-        }
+       }
     }
-
 }
+
